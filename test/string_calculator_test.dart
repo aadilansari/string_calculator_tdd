@@ -29,4 +29,8 @@ void main() {
     var calculator = StringCalculator();
     expect(calculator.add('//;\n1;2'), 3);
   });
+  test('Negative number throw exception', () {
+    var calculator = StringCalculator();
+    expect(calculator.add('-1,2'), throwsA(isA<FormatException>()));
+  });
 }
