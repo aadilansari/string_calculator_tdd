@@ -15,8 +15,18 @@ class StringCalculator {
     }
     var parts = numbers.split(RegExp(r'[,\n]'));
     var sum = 0;
+    var negatives = <int>[];
     for (var part in parts) {
-      sum += int.parse(part);
+      var num = int.parse(part);
+      if (num < 0) {
+        negatives.add(num);
+      } else {
+        sum += num;
+      }
+    }
+    if (negatives.isNotEmpty) {
+      throw FormatException(
+          'Negative numbers not allowed: ${negatives.join(',')}');
     }
     return sum;
   }

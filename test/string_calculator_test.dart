@@ -16,10 +16,6 @@ void main() {
     var calculator = StringCalculator();
     expect(calculator.add('1,5'), 6);
   });
-  test('Two number returns sum', () {
-    var calculator = StringCalculator();
-    expect(calculator.add('1,5'), 6);
-  });
 
   test('New lines between numbers returns sum', () {
     var calculator = StringCalculator();
@@ -31,6 +27,6 @@ void main() {
   });
   test('Negative number throw exception', () {
     var calculator = StringCalculator();
-    expect(calculator.add('-1,2'), throwsA(isA<FormatException>()));
+    expect(() => calculator.add('-1,2'), throwsA(isA<FormatException>()));
   });
 }
