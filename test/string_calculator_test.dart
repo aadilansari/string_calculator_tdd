@@ -25,4 +25,8 @@ void main() {
     var calculator = StringCalculator();
     expect(calculator.add('1\n2,3'), 6);
   });
+  test('Custom delimiter works', () {
+    var calculator = StringCalculator();
+    expect(calculator.add('//;\n1;2'), 3);
+  });
 }
