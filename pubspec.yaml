@@ -1,5 +1,5 @@
 name: string_calculator_tdd
-description: A new Flutter project.
+description: A string calculator kata project following TDD in Dart.
 publish_to: 'none'
 version: 0.1.0
 
