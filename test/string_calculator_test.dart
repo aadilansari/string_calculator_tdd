@@ -11,4 +11,9 @@ void main() {
     var calculator = StringCalculator();
     expect(calculator.add('1'), 1);
   });
+
+  test('Two number returns sum', () {
+    var calculator = StringCalculator();
+    expect(calculator.add('1', '5'), 6);
+  });
 }
