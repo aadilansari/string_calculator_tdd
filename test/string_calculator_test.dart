@@ -6,4 +6,9 @@ void main() {
     var calculator = StringCalculator();
     expect(calculator.add(''), 0);
   });
+
+  test('Single number returns the number itself', () {
+    var calculator = StringCalculator();
+    expect(calculator.add('1'), 1);
+  });
 }
